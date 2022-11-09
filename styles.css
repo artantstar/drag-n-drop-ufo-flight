@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+
+  height: 100vh;
+  margin: 0;
+  padding-top: 20rem;
+
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72);
+}
+
+.preloader {
+  width: 0;
+  height: 0;
+
+  background-image: url(assets/ufo-active.png);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  width: 600px;
+}
+
+.col-planet {
+  width: 150px;
+  height: 150px;
+}
+
+.item {
+  width: 150px;
+  height: 115px;
+
+  cursor: grab;
+
+  background-image: url(assets/ufo.png);
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 115px;
+}
+
+.venus {
+  background-image: url(assets/planet1.png);
+}
+
+.earth {
+  background-image: url(assets/planet2.png);
+}
+
+.mars {
+  background-image: url(assets/planet3.png);
+}
+
+.hold {
+  position: relative;
+
+  background-image: url(assets/ufo-active.png);
+}
+
+.hide {
+  display: none;
+}
+
+.hovered {
+  position: relative;
+}
+
+.hovered::after {
+  position: absolute;
+  bottom: -25px;
+  left: 25px;
+
+  display: block;
+
+  width: 100px;
+  height: 10px;
+
+  content: '';
+
+  border-radius: 50%;
+  background: rgba(0,0,0, 0.5);
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0, 0.5);
+}
